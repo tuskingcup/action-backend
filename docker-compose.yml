@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  hello-api:
+    image: mvna
+    build:
+      context: .
+      dockerfile: ./dockerfile
+    ports:
+      - 8088:8080
