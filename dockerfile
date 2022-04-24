@@ -13,6 +13,6 @@ ARG JAR_FILE=/app/target/*.jar
 
 COPY --from=build ${JAR_FILE} app.jar
 
-EXPOSE 9090
+EXPOSE 8080
 
 ENTRYPOINT exec java -jar app.jar
