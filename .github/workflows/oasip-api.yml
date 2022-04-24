@@ -49,12 +49,4 @@ jobs:
         push: true
         tags: ${{ steps.meta.outputs.tags }}
 
-    - name: Publish compose file
-      uses: appleboy/scp-action@master
-      with:
-        host: ${{ secrets.SSH_HOSTNAME }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        source: "./docker-compose.prod.yml"
-        target: "."
   
